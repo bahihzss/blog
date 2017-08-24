@@ -4,7 +4,7 @@
 <div class="container">
     <img src="{{ asset('img/big.png') }}" alt="{{ config('app.name', 'Blog') }}" style="width: 100%">
 
-    <div class="text-center">
+    <div class="text-center" style="min-height: 20px">
         {!! $posts->links() !!}
     </div>
 
