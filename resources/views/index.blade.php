@@ -24,7 +24,7 @@
             @endif
         </div>
         <div class="panel-body">
-            {!! Markdown::convertToHtml(str_limit($post->body, 300)) !!}
+            {{ str_limit(strip_tags(Markdown::convertToHtml($post->body)), 300) }}
             <p class="text-right"><a href="{{ url('/'.$post->id) }}">{{ trans('post.more') }}</a></p>
         </div>
         <div class="panel-footer">
